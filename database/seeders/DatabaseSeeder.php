@@ -25,11 +25,28 @@ class DatabaseSeeder extends Seeder
         );
 
         User::firstOrCreate(
-            ['email' => 'lailadwikartika@gmail.com'],
+            ['email' => 'smknasnganjuk@yahoo.com'],
             [
                 'name' => 'SMK Nasional Nganjuk',
+                'password' => Hash::make('admin123'),
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'smknasional2016@gmail.com'],
+            [
+                'name' => 'SMK Nasional Nganjuk',
+                'password' => Hash::make('admin123'),
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'lailadwikartika@gmail.com'],
+            [
+                'name' => 'Super Admin',
                 'password' => Hash::make('laila123'),
             ]
         );
+
     }
 }
